@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://g3-deliveryapp-backend.herokuapp.com/';
+const baseURL = 'https://g3-deliveryapp-backend.herokuapp.com';
 
 const register = async ({ name, email, password }) => {
   const { data } = await axios.post(`${baseURL}/users/register`, {
