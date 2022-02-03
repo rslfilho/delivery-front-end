@@ -23,8 +23,8 @@
   flex-flow: column wrap;
   justify-content: center;
   margin-top: 10vh;
-  padding: 25px;
-  width: 30vw;
+  width: 300px;
+  padding: 50px 30px;
 }
 
 .form-register-name, .form-register-email, .form-register-password {
@@ -33,7 +33,7 @@
   display: flex;
   margin: 10px 0;
   padding: 10px 20px;
-  width: 30vh;
+  width: 150px;
 }
 
 .button-register {
