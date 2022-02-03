@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState, useContext } from 'react';
 import { UserContext } from '../../context';
 import { userAPI, validate, userLocalStorage } from '../../services';
-import deliveryPhoto from '../../images/rockGlass.svg';
+import deliveryPhoto from '../../images/delivery.png';
 import './style.css';
 
 const FIVE_SECONDS = 5000;
