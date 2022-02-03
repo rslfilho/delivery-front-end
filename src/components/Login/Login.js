@@ -65,54 +65,56 @@ const Login = () => {
   );
 
   return (
-    <div className="login">
-      <div className="logoImg">
-        <img className="imgSize" src={ logo } alt="logo" />
-      </div>
-      <div className="divavo">
-        <div className="divpai">
-          <div className="spanEmail">
-            <span>Login</span>
-            <input
-              className="inputLogin"
-              data-testid="common_login__input-email"
-              name="email"
-              value={ user.email }
-              onChange={ handleChange }
-              placeholder="Digite seu email"
-            />
-            <span>Senha</span>
-            <input
-              className="inputPassword"
-              data-testid="common_login__input-password"
-              name="password"
-              type="password"
-              onChange={ handleChange }
-              value={ user.password }
-              placeholder="Digite sua senha"
-            />
-          </div>
+    <div className="login-container">
+      <div className="login">
+        <div className="logoImg">
+          <img className="imgSize" src={ logo } alt="logo" />
         </div>
-        <div className="buttonsLogin">
-          <button
-            id="buttonId"
-            className="buttonOne"
-            type="button"
-            data-testid="common_login__button-login"
-            disabled={ buttonLogin }
-            onClick={ handleLogin }
-          >
-            Login
-          </button>
-          <button
-            className="buttonTwo"
-            type="button"
-            onClick={ () => navigate('/register') }
-            data-testid="common_login__button-register"
-          >
-            Ainda não tenho conta
-          </button>
-          { loginError && renderError() }
+        <div className="divavo">
+          <div className="divpai">
+            <div className="spanEmail">
+              <span>Login</span>
+              <input
+                className="inputLogin"
+                data-testid="common_login__input-email"
+                name="email"
+                value={ user.email }
+                onChange={ handleChange }
+                placeholder="Digite seu email"
+              />
+              <span>Senha</span>
+              <input
+                className="inputPassword"
+                data-testid="common_login__input-password"
+                name="password"
+                type="password"
+                onChange={ handleChange }
+                value={ user.password }
+                placeholder="Digite sua senha"
+              />
+            </div>
+          </div>
+          <div className="buttonsLogin">
+            <button
+              id="buttonId"
+              className="buttonOne"
+              type="button"
+              data-testid="common_login__button-login"
+              disabled={ buttonLogin }
+              onClick={ handleLogin }
+            >
+              Login
+            </button>
+            <button
+              className="buttonTwo"
+              type="button"
+              onClick={ () => navigate('/register') }
+              data-testid="common_login__button-register"
+            >
+              Ainda não tenho conta
+            </button>
+            { loginError && renderError() }
+          </div>
         </div>
       </div>
     </div>

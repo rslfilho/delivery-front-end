@@ -9,6 +9,14 @@
   width: 50%;
 }
 
+.login-container {
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .login {
   align-self: center;
   background-color: #e5e5e5;
