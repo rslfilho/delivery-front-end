@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import React, { useEffect, useState, useContext } from 'react';
 import { UserContext } from '../../context';
 import { userAPI, validate, userLocalStorage } from '../../services';
-import deliveryPhoto from '../../images/delivery.png';
+import logo from '../../images/logo.png';
 import './style.css';
 
 const FIVE_SECONDS = 5000;
@@ -67,10 +67,7 @@ const Login = () => {
   return (
     <div className="login">
       <div className="logoImg">
-        <img className="imgSize" src={ deliveryPhoto } alt="logo" />
-      </div>
-      <div className="titleLogin">
-        <h1>Delivery App</h1>
+        <img className="imgSize" src={ logo } alt="logo" />
       </div>
       <div className="divavo">
         <div className="divpai">
