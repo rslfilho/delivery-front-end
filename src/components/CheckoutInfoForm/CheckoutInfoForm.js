@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ProductContext, UserContext } from '../../context';
 import { dataTestIds } from '../../helpers';
+import { checkoutLocalStorage } from '../../services';
 import './style.css';
 
 const CheckoutInfoForm = () => {
@@ -22,6 +23,7 @@ const CheckoutInfoForm = () => {
     try {
       event.preventDefault();
       const id = await postSale({ sellerId, deliveryAddress, deliveryNumber });
+      checkoutLocalStorage.clear();
       navigate(`/customer/orders/${id}`);
     } catch (e) {
       console.log(e);
