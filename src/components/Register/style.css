@@ -23,7 +23,7 @@
   flex-flow: column wrap;
   justify-content: center;
   margin-top: 10vh;
-  width: 300px;
+  width: 400px;
   padding: 50px 30px;
 }
 
@@ -33,7 +33,7 @@
   display: flex;
   margin: 10px 0;
   padding: 10px 20px;
-  width: 150px;
+  width: 250px;
 }
 
 .button-register {
@@ -43,7 +43,7 @@
   cursor: pointer;
   margin-top: 10px;
   padding: 7px;
-  width: 30vh;
+  width: 250px;
 }
 
 .button-register:disabled {
