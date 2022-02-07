@@ -69,34 +69,10 @@ cd delivery-front-end
 npm install
 ```
 
-3 - Mude os endpoints do back para localhost:
+3 - Configure um arquivo `.env` na raiz da aplicação com os seguintes dados:
 
-`/src/context/order/order.js`
-```javascript
-(...)
-const socket = io('http://localhost:3001');
-(...)
-```
-
-`/src/services/orderAPI.js`
-```javascript
-(...)
-const URL = 'http://localhost:3001/';
-(...)
-```
-
-`/src/services/productAPI.js`
-```javascript
-(...)
-const baseURL = 'http://localhost:3001/';
-(...)
-```
-
-`/src/services/userAPI.js`
-```javascript
-(...)
-const baseURL = 'http://localhost:3001/';
-(...)
+```env
+REACT_APP_BACKEND_URL=http://localhost:3001/
 ```
 
 4 - Depois de instaladas as depedências, inicie a aplicação:
