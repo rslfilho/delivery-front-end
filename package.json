@@ -65,5 +65,10 @@
       "./services/renderWithRouter",
       "./services/history"
     ]
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "BACKEND_URL"
+    ]
   }
 }

@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-const baseURL = 'https://g3-deliveryapp-backend.herokuapp.com';
+const baseURL = process.env.REACT_APP_BACKEND_URL;
 
 const getAll = async (token) => {
   const { data: products } = await axios.get(
-    `${baseURL}/products`,
+    `${baseURL}products`,
     {
       headers: {
         Authorization: token,
