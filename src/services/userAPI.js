@@ -1,9 +1,9 @@
 import axios from 'axios';
 
-const baseURL = 'https://g3-deliveryapp-backend.herokuapp.com';
+const baseURL = process.env.REACT_APP_BACKEND_URL;
 
 const register = async ({ name, email, password }) => {
-  const { data } = await axios.post(`${baseURL}/users/register`, {
+  const { data } = await axios.post(`${baseURL}users/register`, {
     name,
     email,
     password,
@@ -14,7 +14,7 @@ const register = async ({ name, email, password }) => {
 
 const create = async (token, user) => {
   const { data } = await axios.post(
-    `${baseURL}/users`,
+    `${baseURL}users`,
     { ...user },
     {
       headers: {
@@ -27,7 +27,7 @@ const create = async (token, user) => {
 
 const login = async ({ email, password }) => {
   const { data: user } = await axios.post(
-    `${baseURL}/login`,
+    `${baseURL}login`,
     {
       email,
       password,
@@ -38,7 +38,7 @@ const login = async ({ email, password }) => {
 
 const getAll = async (token) => {
   const { data: users } = await axios.get(
-    `${baseURL}/users`,
+    `${baseURL}users`,
     {
       headers: {
         Authorization: token,
@@ -50,7 +50,7 @@ const getAll = async (token) => {
 
 const remove = async (id, token) => {
   const { data: response } = await axios.delete(
-    `${baseURL}/users/${id}`,
+    `${baseURL}users/${id}`,
     {
       headers: {
         Authorization: token,

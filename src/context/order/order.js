@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 import PropTypes from 'prop-types';
 import { orderAPI, userLocalStorage, validate } from '../../services';
 
-const socket = io('https://g3-deliveryapp-backend.herokuapp.com/');
+const socket = io(process.env.REACT_APP_BACKEND_URL);
 
 export const OrderContext = createContext();
 

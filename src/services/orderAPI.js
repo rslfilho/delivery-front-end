@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://g3-deliveryapp-backend.herokuapp.com/';
+const URL = process.env.REACT_APP_BACKEND_URL;
 
 const getAll = async (token) => {
   const { data } = await axios.get(
